@@ -424,7 +424,7 @@ where
         self.inner
             .conn
             .send_datagram(Datagram::new(stream_id, data))?;
-        tracing::info!("Sent datagram");
+        tracing::debug!("Sent datagram");
 
         Ok(())
     }
